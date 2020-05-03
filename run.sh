@@ -7,6 +7,7 @@ python run_language_modeling.py \
     --output_dir=models \
     --model_type=bert \
     --model_name_or_path=/data/package/chinese_roberta_wwm_large_ext_pytorch \
+    --logging_dir=models \
     --do_train \
     --train_data_file=$TRAIN_FILE \
     --do_eval \
@@ -22,7 +23,6 @@ python run_language_modeling.py \
     --mlm_probability 0.10\
     --warmup_proportion 0.1\
     --warmup_steps -1\
-    --logging_steps 30\
     --mlm
     
     #--model_name_or_path=./models/checkpoint-206 \
